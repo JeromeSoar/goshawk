@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://blog.jsoar.cn/</id>
+  <title>Goshawk</title>
+  <subtitle>Goshawk blogs</subtitle>
+  <author>
+    <name>JeromeSoar</name>
+  </author>
+  <updated>2021-12-14T11:42:03.508Z</updated>
+  <generator>@mr-hope/vuepress-plugin-feed</generator>
+  <link rel="self" href="https://blog.jsoar.cn/atom.xml"/>
+  <link rel="alternate" href="https://blog.jsoar.cn/"/>
+  <rights>Copyright by JeromeSoar</rights>
+  <category term="Java"/>
+  <contributor>
+    <name>JeromeSoar</name>
+  </contributor>
+  <entry>
+    <title type="html">Java 创建线程的方式有几种</title>
+    <id>https://blog.jsoar.cn/program-language/java/multi-thread/thread-creation-methods/</id>
+    <link href="https://blog.jsoar.cn/program-language/java/multi-thread/thread-creation-methods/"/>
+    <updated>2021-12-02T03:02:47.000Z</updated>
+    <author>
+      <name>JeromeSoar</name>
+    </author>
+    <category term="Java"/>
+    <contributor>
+      <name>JeromeSoar</name>
+    </contributor>
+    <published>2021-12-02T00:00:00.000Z</published>
+    <rights>Copyright by JeromeSoar</rights>
+  </entry>
+  <entry>
+    <title type="html">Java 线程创建后的设置</title>
+    <id>https://blog.jsoar.cn/program-language/java/multi-thread/thread-created-other-settings/</id>
+    <link href="https://blog.jsoar.cn/program-language/java/multi-thread/thread-created-other-settings/"/>
+    <updated>2021-12-02T03:02:47.000Z</updated>
+    <author>
+      <name>JeromeSoar</name>
+    </author>
+    <category term="Java"/>
+    <contributor>
+      <name>JeromeSoar</name>
+    </contributor>
+    <published>2021-12-02T00:00:00.000Z</published>
+    <rights>Copyright by JeromeSoar</rights>
+  </entry>
+  <entry>
+    <title type="html">代办</title>
+    <id>https://blog.jsoar.cn/todo/</id>
+    <link href="https://blog.jsoar.cn/todo/"/>
+    <updated>2021-12-08T03:28:35.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="java-系列"> Java 系列</h2>
+<p>deep-in-java</p>
+<p>java 多线程</p>
+<p>java JVM</p>
+<p>Java 集合</p>
+<h2 id="spring-系列"> Spring 系列</h2>
+<p>deep-in-spring-framework</p>
+<p>spring core</p>
+<p>spring aop</p>
+<p>spring mvc</p>
+<h2 id="spring-boot-系列"> Spring Boot 系列</h2>
+<p>deep-in-spring-boot</p>
+<p>spring-boot 核心特性</p>
+<p>spring-boot 生态整合</p>
+]]></content>
+    <author>
+      <name>JeromeSoar</name>
+    </author>
+    <contributor>
+      <name>JeromeSoar</name>
+    </contributor>
+    <published>2021-01-24T00:00:00.000Z</published>
+    <rights>Copyright by JeromeSoar</rights>
+  </entry>
+  <entry>
+    <title type="html">Java 指南</title>
+    <id>https://blog.jsoar.cn/program-language/java/</id>
+    <link href="https://blog.jsoar.cn/program-language/java/"/>
+    <updated>2021-12-02T06:09:26.000Z</updated>
+    <author>
+      <name>JeromeSoar</name>
+    </author>
+    <category term="Java"/>
+    <contributor>
+      <name>JeromeSoar</name>
+    </contributor>
+    <published>2021-01-24T00:00:00.000Z</published>
+    <rights>Copyright by JeromeSoar</rights>
+  </entry>
+  <entry>
+    <title type="html">Tomcat 多端口</title>
+    <id>https://blog.jsoar.cn/</id>
+    <link href="https://blog.jsoar.cn/"/>
+    <updated>2021-11-30T14:44:08.000Z</updated>
+    <content type="html"><![CDATA[<p>在我们部署项目到<code>Tomcat</code>的时候，有时候会配置通过域名访问项目。接下来我们就来了解一下多域名多端口访问项目的相关配置。</p>
+<h2 id="演示环境"> 演示环境</h2>
+<ul>
+<li>Tomcat 8.5</li>
+</ul>
+<h2 id="进行配置"> 进行配置</h2>
+<h3 id="多端口访问"> 多端口访问</h3>
+<p>当一个项目需要使用多个端口号去访问的时候，只需要在<code>Service</code> 标签下进行这样简单的配置一下就好：</p>
+<div><pre><code><span><span><span>&lt;</span>Connector</span> <span>port</span><span><span>=</span><span>"</span>8080<span>"</span></span> <span>protocol</span><span><span>=</span><span>"</span>HTTP/1.1<span>"</span></span>
+               <span>connectionTimeout</span><span><span>=</span><span>"</span>20000<span>"</span></span>
+               <span>redirectPort</span><span><span>=</span><span>"</span>8443<span>"</span></span> <span>/></span></span>
+
+<span><span><span>&lt;</span>Connector</span> <span>port</span><span><span>=</span><span>"</span>8081<span>"</span></span> <span>protocol</span><span><span>=</span><span>"</span>HTTP/1.1<span>"</span></span>
+               <span>connectionTimeout</span><span><span>=</span><span>"</span>20000<span>"</span></span>
+               <span>redirectPort</span><span><span>=</span><span>"</span>8443<span>"</span></span> <span>/></span></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>这样就保证了当<code>Tomcat</code>运行起来的时候，同时监听多个端口，通过<code>8080</code>和<code>8081</code>端口来访问项目。</p>
+<h3 id="多域名访问"> 多域名访问</h3>
+<p>配置项目的多域名的访问，最简单的方式就是在<code>Host</code>标签下配置<code>Alias</code>标签：</p>
+<div><pre><code><span><span><span>&lt;</span>Host</span> <span>name</span><span><span>=</span><span>"</span>www.jerome.xin<span>"</span></span>  <span>appBase</span><span><span>=</span><span>"</span>webapps<span>"</span></span> <span>unpackWARs</span><span><span>=</span><span>"</span>true<span>"</span></span> <span>autoDeploy</span><span><span>=</span><span>"</span>true<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>Alias</span><span>></span></span>domain.jerome.xin<span><span><span>&lt;/</span>Alias</span><span>></span></span>
+    <span><span><span>&lt;</span>Alias</span><span>></span></span>domain2.jerome.xin<span><span><span>&lt;/</span>Alias</span><span>></span></span>
+	<span><span><span>&lt;</span>Context</span> <span>docBase</span><span><span>=</span><span>"</span>/project<span>"</span></span> <span>path</span><span><span>=</span><span>"</span><span>"</span></span><span>/></span></span>  
+<span><span><span>&lt;/</span>Host</span><span>></span></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>如果是将<code>Host</code>的内容复制一份，只修改<code>name</code>属性也可以达到同样的效果。可以通过<code>www.jerome.xin</code>、<code>domain.jerome.xin</code>和<code>domian2.jerome.xin</code>这些域名来访问项目。</p>
+<h3 id="多端口多域名访问"> 多端口多域名访问</h3>
+<p>配置这个就是将<code>Service</code>标签以及标签下的内容复制一下修改<code>name</code>，然后配置不同<code>Connector</code>，再配置不同的<code>Host#name</code>属性，如下所示：</p>
+<div><pre><code><span><span><span>&lt;</span>Service</span> <span>name</span><span><span>=</span><span>"</span>Catalina<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>Connector</span> <span>port</span><span><span>=</span><span>"</span>8080<span>"</span></span> <span>protocol</span><span><span>=</span><span>"</span>HTTP/1.1<span>"</span></span>
+               <span>connectionTimeout</span><span><span>=</span><span>"</span>20000<span>"</span></span>
+               <span>redirectPort</span><span><span>=</span><span>"</span>8443<span>"</span></span><span>/></span></span>
+	<span><span><span>&lt;</span>Engine</span> <span>name</span><span><span>=</span><span>"</span>Catalina<span>"</span></span> <span>defaultHost</span><span><span>=</span><span>"</span>localhost<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>Realm</span> <span>className</span><span><span>=</span><span>"</span>org.apache.catalina.realm.LockOutRealm<span>"</span></span><span>></span></span>
+            <span><span><span>&lt;</span>Realm</span> <span>className</span><span><span>=</span><span>"</span>org.apache.catalina.realm.UserDatabaseRealm<span>"</span></span>
+                   <span>resourceName</span><span><span>=</span><span>"</span>UserDatabase<span>"</span></span><span>/></span></span>
+        <span><span><span>&lt;/</span>Realm</span><span>></span></span>
+        <span><span><span>&lt;</span>Host</span> <span>name</span><span><span>=</span><span>"</span>www.jerome.xin<span>"</span></span>  <span>appBase</span><span><span>=</span><span>"</span>webapps<span>"</span></span> <span>unpackWARs</span><span><span>=</span><span>"</span>true<span>"</span></span> <span>autoDeploy</span><span><span>=</span><span>"</span>true<span>"</span></span><span>></span></span>
+            <span><span><span>&lt;</span>Context</span> <span>docBase</span><span><span>=</span><span>"</span>/project1<span>"</span></span> <span>path</span><span><span>=</span><span>"</span><span>"</span></span><span>/></span></span>  
+        <span><span><span>&lt;/</span>Host</span><span>></span></span>
+    <span><span><span>&lt;/</span>Engine</span><span>></span></span>
+<span><span><span>&lt;/</span>Service</span><span>></span></span>
+
+<span><span><span>&lt;</span>Service</span> <span>name</span><span><span>=</span><span>"</span>Catalina1<span>"</span></span><span>></span></span>
+	<span><span><span>&lt;</span>Connector</span> <span>port</span><span><span>=</span><span>"</span>8081<span>"</span></span> <span>protocol</span><span><span>=</span><span>"</span>HTTP/1.1<span>"</span></span>
+               <span>connectionTimeout</span><span><span>=</span><span>"</span>20000<span>"</span></span>
+               <span>redirectPort</span><span><span>=</span><span>"</span>8443<span>"</span></span><span>/></span></span>
+	<span><span><span>&lt;</span>Engine</span> <span>name</span><span><span>=</span><span>"</span>Catalina<span>"</span></span> <span>defaultHost</span><span><span>=</span><span>"</span>localhost<span>"</span></span><span>></span></span>
+		<span><span><span>&lt;</span>Realm</span> <span>className</span><span><span>=</span><span>"</span>org.apache.catalina.realm.LockOutRealm<span>"</span></span><span>></span></span>
+            <span><span><span>&lt;</span>Realm</span> <span>className</span><span><span>=</span><span>"</span>org.apache.catalina.realm.UserDatabaseRealm<span>"</span></span>
+                   <span>resourceName</span><span><span>=</span><span>"</span>UserDatabase<span>"</span></span><span>/></span></span>
+        <span><span><span>&lt;/</span>Realm</span><span>></span></span>
+        <span><span><span>&lt;</span>Host</span> <span>name</span><span><span>=</span><span>"</span>www.jeromezhu.xin<span>"</span></span>  <span>appBase</span><span><span>=</span><span>"</span>webapps<span>"</span></span> <span>unpackWARs</span><span><span>=</span><span>"</span>true<span>"</span></span> <span>autoDeploy</span><span><span>=</span><span>"</span>true<span>"</span></span><span>></span></span>
+            <span><span><span>&lt;</span>Context</span> <span>docBase</span><span><span>=</span><span>"</span>/project2<span>"</span></span> <span>path</span><span><span>=</span><span>"</span><span>"</span></span><span>/></span></span>  
+        <span><span><span>&lt;/</span>Host</span><span>></span></span>
+    <span><span><span>&lt;/</span>Engine</span><span>></span></span>
+<span><span><span>&lt;/</span>Service</span><span>></span></span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br></div></div><p>这样的配置就实现了，通过<code>www.jerome.xin:8080</code>访问到<code>project1</code>项目，通过<code>www.jeromezhu.xin:8081</code>访问到<code>project2</code>项目。</p>
+<h2 id="总结"> 总结</h2>
+<p>通过上面的配置，我们已经完成了通过域名访问项目的各种方式。但是配置多域名的时候稍有不慎就会出现重复加载资源的问题。这个问题我在别的文章中进行说明。</p>
+]]></content>
+    <author>
+      <name>JeromeSoar</name>
+    </author>
+    <category term="Java"/>
+    <contributor>
+      <name>JeromeSoar</name>
+    </contributor>
+    <published>2021-01-25T00:00:00.000Z</published>
+    <rights>Copyright by JeromeSoar</rights>
+  </entry>
+</feed>
